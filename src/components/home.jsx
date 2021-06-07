@@ -1,44 +1,116 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGithub as Github} from '@fortawesome/free-brands-svg-icons'
-export default function Home(){
-    return(
+import { useEffect } from 'react';
+import {Link} from 'react-router-dom'
+import Promo from './subcomponents/promo'
+
+export default function Home() {
+    useEffect(() => {
+        /* Parallax Animation */
+        if(window.innerWidth > 1000){
+            document.addEventListener('mousemove', parallax);
+        function parallax(e) {
+            this.querySelectorAll('.parallax').forEach((layer) => {
+                const speed = layer.getAttribute('data-speed');
+                const x = ((window.innerWidth - e.pageX * speed) / 75);
+                const y = ((window.innerHeight - e.pageY * speed) / 75);
+                layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            })
+        }
+        }
+        /* Card Animation */
+        const cards = document.getElementsByClassName('cards');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].querySelectorAll('.card').forEach((card) => {
+                card.addEventListener('mouseover', () => {
+
+                    const border = card.childNodes[0];
+                    border.style.transform = 'translateX(-10px) translateY(10px)'
+                })
+                card.addEventListener('mouseout', () => {
+                    const border = card.childNodes[0];
+                    border.style.transform = 'translateX(-20px) translateY(20px)'
+                })
+            })
+        }
+    })
+    return (
         <div className="home">
             <div className="hero">
                 <div className="content">
-                    <h1 className="head">Theme JSX</h1>
-                    <h2 className="info">A React template by <a href="https://anshc.co" target="blank">Ansh C</a></h2>
-                    <h3 className="description">Run <code>npm install</code> to get all the packages used by this theme installed.</h3>  
-                    <a href="https://github.com/AnshC/theme-jsx" className="repo"><FontAwesomeIcon className="icon" icon={Github}/> Clone from repository</a>
+                    <h1 className="head">
+                        Process<p>&#38;Concepts</p>
+                    </h1>
+                    <p className="info">
+                        It's all about process and concept.
+                    </p>
+                </div>
+                <div className="container">
+                    <img src="/img/hero.jpg" alt="Mehrangarh Fort" className="parallax" data-speed="1" />
+                    <div className="box parallax" data-speed="5"></div>
+                    <div className="box-2 parallax" data-speed="-3"></div>
                 </div>
             </div>
-            <div className="main">
-                <section className="cards">
-                    <h1 className="head">What it Includes</h1>
-                    <div className="row">
+            <section className="promo-section">
+            <Promo />
+            </section>
+            <section className="work">
+                <h1 className="head">Thinking Out of The <span>Box.</span></h1>
+                <div className="box">
+                    <div className="row cards">
                         <div className="card">
-                            <h1 className="head">Dependencies</h1>
-                            <p className="description">It includes:</p>
-                            <ul>
-                                <li>React Router (react-router-dom)</li>
-                                <li>FontAwesome for React</li>
-                            </ul>
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/sketches.jpg)' }}>
+                                <div className="text">Sketches</div>
+                            </div>
+                        </div>
+                        <Link to="/gallery/painting" className="card ReactLink">
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/painting.jpg)' }}>
+                                <div className="text">Paintings</div>
+                            </div>
+                        </Link>
+                        <Link to="/gallery/installation" className="card ReactLink">
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/installations.jpg)', backgroundPosition: 'left' }}>
+                                <div className="text">Installations</div>
+                            </div>
+                        </Link>
+                        <div className="card">
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/embroidery.jpg)' }}>
+                                <div className="text">Textiles</div>
+                            </div>
                         </div>
                         <div className="card">
-                            <h1 className="head">File Structure</h1>
-                            <p className="description">It has a simple <code>src</code> structure with a <code>components</code> folder, common page components (Home, About, Navigation, and Footer), and a cleaned up <code>CRA</code> template</p>
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/ceramics.jpg)' }}>
+                                <div className="text">Ceramics</div>
+                            </div>
                         </div>
                         <div className="card">
-                            <h1 className="head">Features</h1>
-                            <p className="description">It has a number of features useful for ReactJS web development including:</p>
-                            <ul>
-                                <li>Routing</li>
-                                <li>SVGs</li>
-                                <li>Fonts</li>
-                            </ul>
+                            <div className="card-box"></div>
+                            <div className="img" style={{ backgroundImage: 'url(/img/works/sculptures.jpg)', backgroundPosition: 'left' }}>
+                                <div className="text">Sculptures</div>
+                            </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
+            <section className="about">
+                <h1 className="head">Who I Am.</h1>
+                <h2 className="subhead">Meghna Shah Vaidya</h2>
+                <div className="content">
+                    <div className="image">
+                        <img src="/img/meghna/profile.jpg" alt="Meghna Shah Vaidya" />
+                        <div className="box"></div>
+                    </div>
+                    <div className="text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nesciunt, tempore soluta recusandae quis ab exercitationem tenetur nemo fuga quibusdam? Iste tempore aspernatur est ullam qui, maxime nemo facilis!</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nesciunt, tempore soluta recusandae quis ab exercitationem tenetur nemo fuga quibusdam? Iste tempore aspernatur est ullam qui, maxime nemo facilis!</p>
+                        <p style={{paddingBottom: '20px'}}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nesciunt, tempore soluta recusandae quis ab exercitationem tenetur nemo fuga quibusdam? Iste tempore aspernatur est ullam qui, maxime nemo facilis!</p>
+                        <Link to="/about" className="ReactLink link">Read More</Link>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

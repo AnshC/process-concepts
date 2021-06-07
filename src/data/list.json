@@ -1,0 +1,103 @@
+{
+    "data": [
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/performance_1.jpg",
+            "alt": "Performance Art",
+            "caption": "Performance Art",
+            "id": "performance_1"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/performance_2.jpg",
+            "alt": "Performance Art",
+            "caption": "Performance Art",
+            "id": "performance_2"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/painting_1.jpg",
+            "alt": "Painting",
+            "caption": "Painting",
+            "id": "painting_1"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/painting_2.jpg",
+            "alt": "Painting",
+            "caption": "Painting",
+            "id": "painting_2"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/painting_3.jpg",
+            "alt": "Painting",
+            "caption": "Painting",
+            "id": "painting_3"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/painting_4.jpg",
+            "alt": "Painting",
+            "caption": "Painting",
+            "id": "painting_4"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/dancer_1.jpg",
+            "alt": "Dancer Painting",
+            "caption": "Dancer Painting",
+            "id": "dancer_1"
+        },
+        {
+            "type": "painting",
+            "src": "/img/gallery/paintings/dancer_2.jpg",
+            "alt": "Dancer Painting",
+            "caption": "Dancer Painting",
+            "id": "dancer_2"
+        }
+        ,
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_1.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_1"
+        },
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_2.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_2"
+        },
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_3.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_3"
+        },
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_4.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_4"
+        },
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_5.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_5"
+        },
+        {
+            "type": "installation",
+            "src": "/img/gallery/paintings/installation_6.jpg",
+            "alt": "Installation Art",
+            "caption": "Installation Art",
+            "id": "installation_6"
+        }
+    ]
+}
